@@ -7,7 +7,7 @@ A list of Java nio Filesystems, some descriptions and tests.
 
 * [google/JimFS](https://github.com/google/jimfs)
 * [marschall/memoryfilesystem](https://github.com/marschall/memoryfilesystem)
-* [openCage/memoryfs](https://github.com/openCage/memoryfs) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.pfabulist/memoryfs/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.pfabulist/memoryfs)
+* [openCage/memoryfs](https://github.com/openCage/memoryfs) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.pfabulist.lindwurm/memoryfs/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.pfabulist.lindwurm/memoryfs)
 * [openCage/memoryntfs](https://github.com/openCage/memoryntfs)
 * [sbridges/ephemeralfs](https://github.com/sbridges/ephemeralfs)
 * [jboss/shrinkwrap](https://github.com/shrinkwrap)
@@ -23,7 +23,7 @@ A list of Java nio Filesystems, some descriptions and tests.
 ### encrypting
 
 * [usrflo/encfs4j](https://github.com/usrflo/encfs4j) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.agitos/encfs4j/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.agitos/encfs4j)
-* [openCage/stellvertreter](https://github.com/openCage/stellvertreter)
+* [openCage/stellvertreter](https://github.com/openCage/stellvertreter) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.pfabulist.lindwurm/stellvertreter/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.pfabulist.lindwurm/stellvertreter)
 
 ### special
 
@@ -31,8 +31,8 @@ A list of Java nio Filesystems, some descriptions and tests.
 
 ### Frameworks
 
-* [openCage/eightyfs](https://github.com/openCage/eightfs)
-* [fge/java7-fs-base](https://github.com/fge/java7-fs-base)
+* [openCage/eightyfs](https://github.com/openCage/eightfs) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.pfabulist.lindwurm/eightyfs/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.pfabulist.lindwurm/eightyfs)
+* [fge/java7-fs-base](https://github.com/fge/java7-fs-base) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.fge/java7-fs-base/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.fge/java7-fs-base)
 
 ### Other
 
