@@ -150,9 +150,9 @@ But because JSR-203 is quite large none implements it completely or bug free.
 MemoryFilesystems are often configurable. The different configuration might have quite different features.
 
 
-|**filesystem/feature** |**active** | **CRUD** |
-|:-------------------| :-------:|
-|**google/JimFS**     | yes |  yes 
-|**openCage/memoryfs**  | yes | yes
+| filesystem / feature| active | CRUD |
+|:---------------------|:---------:|:------:| 
+|**google/JimFS**     | yes |  yes    |
+|**openCage/memoryfs**  | yes | yes    |
 
 
