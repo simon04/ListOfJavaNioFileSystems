@@ -150,9 +150,11 @@ But because JSR-203 is quite large none implements it completely or bug free.
 MemoryFilesystems are often configurable. The different configuration might have quite different features.
 
 
-| filesystem / feature| active | CRUD |
-|:---------------------|:---------:|:------:| 
-|**google/JimFS**     | yes |  yes    |
-|**openCage/memoryfs**  | yes | yes    |
+| filesystem / feature           | active |  CRUD | Hard Links | Soft Links | Attributes | FileLock | FileChannel | PathMatcher | WatchService | unix | windows | mac |  
+|:-------------------------------|:------:|:-----:| :---------:|:----------:|:----------:|:--------:|:-----------:|:-----------:|:------------:|:----:|:-------:|:---:| 
+|**google/JimFS**                | yes    | yes   | yes        | yes        | yes        | yes      | yes         | yes         | yes          | yes  | yes     | ? |                                                
+|**openCage/memoryfs**           | yes    | yes   | yes        | yes        | yes        | no       | no          | yes         | yes          | yes  | yes     | ? |
+|**marschall/memoryfilesystem**  | yes    | yes   | no         | yes        | yes        | yes      | ues         | yes         | no           | yes  | yes     | ? |
+
 
 
