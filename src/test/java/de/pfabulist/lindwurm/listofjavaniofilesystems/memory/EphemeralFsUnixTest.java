@@ -44,13 +44,13 @@ public class EphemeralFsUnixTest extends AllTests {
     public static void beforeClass() throws IOException {
 
         capa = build().unix().noPosix().next().
-                playground().set( EphemeralFsFileSystemBuilder.unixFs().build().getPath("/play")).
+                playground().set( EphemeralFsFileSystemBuilder.unixFs().build().getPath( "/play" ) ).
                 closable().no(). //playground( memoryFS().closable( true ).watchService(true).build("memoryfsTestClosable2").getPath("/play")).
-                //fileChannel().
-                //  readOnly().file( roFile ).dir( roDir ).yes().
-//                        bug( "testReadAttributesViewFutureExistingFile").
-//                bug( "testMoveSymLinkDoesNotChangeLastModifiedTime" ).
-//                bug( "testReadChannelOfDir" ).
+                bug( "testAppendAndReadThrows" ).
+                bug( "testChannelSetNegativePositionThrows" ).
+                bug( "testCheckAccessOtherProvider" ).
+                bug( "testCloseAWatchServiceReleasesBlockedTreads" ).
+                bug( "testAppendAndReadThrows" ).
                 done();
 
 
