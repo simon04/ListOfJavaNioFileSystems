@@ -46,24 +46,28 @@ public class JimFSUnixTest extends AllTests {
     public static void before() {
 
         descr = build().
-                unix().next().
-                playground().set( Jimfs.newFileSystem( Configuration.unix().toBuilder().setAttributeViews( "basic", "owner", "posix", "unix" ).build() ).getPath( "/play" ) ).
+                playgrounds().
+                    std( Jimfs.newFileSystem( Configuration.unix().toBuilder().setAttributeViews( "basic", "owner", "posix", "unix" ).build() ).getPath( "/play" ) ).
+                    sameProviderDifferentFileSystem( Jimfs.newFileSystem( Configuration.unix().toBuilder().setAttributeViews( "basic", "owner", "posix", "unix" ).build() ).getPath( "/play" ) ).
+                    closable( Jimfs.newFileSystem( Configuration.unix().toBuilder().setAttributeViews( "basic", "owner", "posix", "unix" ).build() ).getPath( "/play" ) ).
+                    sizeLimitedPlayground( Jimfs.newFileSystem( Configuration.unix().toBuilder().setMaxSize( 38000L ).build() ).getPath( "/play" ) ).
+                    noSameFileSystemDifferentStore().
+                    next().
+                unix().noPermissionChecks().next().
                 time().noLastAccessTime().next().
-                closable().playground( Jimfs.newFileSystem( Configuration.unix().toBuilder().setAttributeViews( "basic", "owner", "posix", "unix" ).build() ).getPath( "/play" ) ).
-                pathConstraints().noMaxFilenameLength().next().
-                //symlinks().toOtherProviders(false).relativeTargets(false).yes().
+                pathConstraints().noMaxFilenameLength().noMaxPathLength().next().
                 watchable().delay( 5500 ).
                 fsCreation().
-                    uri( Tests05URI::toURIWithoutPath ).
-                    env( Collections.singletonMap( "config", Configuration.unix().toBuilder().setAttributeViews( "basic", "owner", "posix", "unix" ).build() ) ).
-                    next().
+                        uri( Tests05URI::toURIWithoutPath ).
+                        env( Collections.singletonMap( "config", Configuration.unix().toBuilder().setAttributeViews( "basic", "owner", "posix", "unix" ).build() ) ).
+                        next().
                 nitpickScheme( "UnsupportedAttributeThrows", "IllegalArg instead Unsupported" ).
                 bug( "testCloseDirStreamInTheMiddleOfIteration" ).
-                bug( "testClosedFSGetFileStore").
-                bug( "testCopySymLinkToItself").
-                bug( "testCopyBrokenSymLinkToItself").
-                bug( "testMoveARelSymLink").
-                bug( "testMoveARelSymLink2").
+                bug( "testClosedFSGetFileStore" ).
+                bug( "testCopySymLinkToItself" ).
+                bug( "testCopyBrokenSymLinkToItself" ).
+                bug( "testMoveARelSymLink" ).
+                bug( "testMoveARelSymLink2" ).
                 bug( "testSymLinkToUnnormalizedRelPath" ).
                 bug( "testGetFileStoreOfNonExistent" ).
                 bug( "testGetFileStoreOfBrokenSymLink" ).
@@ -71,18 +75,21 @@ public class JimFSUnixTest extends AllTests {
                 bug( "testWatchAModify" ).
                 bug( "testWatchSeveralEventsInOneDir" ).
                 bug( "testWatchTwoModifiesOneKey" ).
-                bug( "testWatchATruncate").
-                nitpick( "testReadChannelOfDir", "who cares" ).
+                bug( "testWatchATruncate" ).
+                bug( "testTransferFromPositionBeyondFileSizeDoesNothing" ).
+                bug( "testAppendAndTruncateExistingThrows" ).
+                bug( "testTruncateOnAppendChannelThrows" ).
+                bug("testGetPathOtherURI").
+                bug("testCantGetClosedFSViaURI").
+                bug("testNewFileSystemOfExistingThrows").
+                bug("testGetExistingFileSystem").
+                nitpick( "testReadChannelOfDirDoesNotThrow", "who cares" ).
                 nitpick( "testRegisterWatchServiceOfClosedFS", "different exception" ).
-                nitpick("testAppendAndReadThrows", "IllegalArg instead Unsupported").
+                nitpick( "testAppendAndReadThrows", "IllegalArg instead Unsupported" ).
+                nitpick( "testDefaultPathIsSmallerThanAbsolute", "might be enough to be consistent" ).
+
                 done();
-                
-//                new FSDescription().
-//                closable().yes().
-//                hardLinks().toDirs(false).yes().
-//                unix(true).
-//                watchService().delay(5500).yes().
-//                symLinks().toOtherProviders(false).yes().
+
     }
 
     @AfterClass

@@ -46,16 +46,18 @@ public class JimFSWindowsTest extends AllTests {
     public static void before() {
 
         descr = build().
+                playgrounds().
+                    std( Jimfs.newFileSystem( Configuration.windows().toBuilder().setAttributeViews( "basic", "owner", "dos" ).build() ).getPath( "c:\\play" ) ).
+                    closable( Jimfs.newFileSystem( Configuration.windows().toBuilder().setAttributeViews( "basic", "owner" ).build() ).getPath( "c:\\play" ) ).
+                    sizeLimitedPlayground( Jimfs.newFileSystem( Configuration.windows().toBuilder().setMaxSize( 38000L ).build() ).getPath( "c:\\play" ) ).
+                    next().
                 windows().next().
-                playground().set( Jimfs.newFileSystem( Configuration.windows().toBuilder().setAttributeViews( "basic", "owner" ).build() ).getPath( "c:\\play" ) ).
                 time().noLastAccessTime().next().
-                closable().playground( Jimfs.newFileSystem( Configuration.windows().toBuilder().setAttributeViews( "basic", "owner" ).build() ).getPath( "c:\\play" ) ).
                 pathConstraints().noMaxFilenameLength().next().
-                //symlinks().toOtherProviders(false).relativeTargets(false).yes().
                 watchable().delay( 5500 ).
                 fsCreation().
                     uri( Tests05URI::toURIWithoutPath ).
-                    env( Collections.singletonMap( "config", Configuration.unix().toBuilder().setAttributeViews( "basic", "owner", "posix", "unix" ).build() ) ).
+                    env( Collections.singletonMap( "config", Configuration.unix().toBuilder().setAttributeViews( "basic", "owner", "dos" ).build() ) ).
                     next().
 //                nitpickScheme( "UnsupportedAttributeThrows", "IllegalArg instead Unsupported" ).
 //                bug( "testCloseDirStreamInTheMiddleOfIteration" ).
@@ -93,16 +95,6 @@ public class JimFSWindowsTest extends AllTests {
     public JimFSWindowsTest() {
         super( descr );
     }
-
-//    @Test( expected = FileSystemAlreadyExistsException.class )
-//    public void testNewFileSystemOfExistingThrows() throws IOException {
-//        Map<String,Object> env = new HashMap<>();
-//        env.put(
-//
-//                FS.provider().newFileSystem( toURI( FS ), env );
-//    }
-
-
 
 
 }

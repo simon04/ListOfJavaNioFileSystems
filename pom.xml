@@ -29,21 +29,21 @@
     <parent>
         <groupId>de.pfabulist</groupId>
         <artifactId>opencage-parent</artifactId>
-        <version>2.3</version>
+        <version>3.2</version>
         <relativePath>../opencage-parent/pom.xml</relativePath>
     </parent>
 
     <groupId>de.pfabulist.lindwurm</groupId>
     <artifactId>listofjavaniofilesystems</artifactId>
-    <version>0.4.10</version>
+    <version>0.4.12</version>
 
     <name>listofjavaniofilesystems</name>
-    <description>A java 7 nio2 based in memory filesystem simulation of a ntfs filesytem</description>
-    <url>http://www.github.com/openCage/memoeryntfs</url>
+    <description>A List of Java Nio Filesystems</description>
+    <url>http://www.github.com/openCage/listofjavaniofilesystems</url>
 
     <licenses>
         <license>
-            <name>The BSD 2-Clause License</name>
+            <name>BSD-2-Clause</name>
             <url>http://opensource.org/licenses/BSD-2-Clause</url>
         </license>
     </licenses>
@@ -68,19 +68,13 @@
         <dependency>
             <groupId>de.pfabulist</groupId>
             <artifactId>kleinod</artifactId>
-            <version>0.24.3</version>
-        </dependency>
-
-        <dependency>
-            <groupId>de.pfabulist</groupId>
-            <artifactId>unchecked</artifactId>
-            <version>1.0</version>
+            <version>0.33</version>
         </dependency>
 
         <dependency>
             <groupId>de.pfabulist.lindwurm</groupId>
             <artifactId>niotest</artifactId>
-            <version>0.28.6</version>
+            <version>0.33</version>
             <scope>test</scope>
         </dependency>
 
@@ -107,30 +101,30 @@
         <dependency>
             <groupId>com.google.jimfs</groupId>
             <artifactId>jimfs</artifactId>
-            <version>1.0</version>
+            <version>1.1</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>de.pfabulist.lindwurm</groupId>
-            <artifactId>memoryntfs</artifactId>
-            <version>0.4.10</version>
+            <artifactId>memoryfs</artifactId>
+            <version>0.33</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>com.github.marschall</groupId>
             <artifactId>memoryfilesystem</artifactId>
-            <version>0.6.6</version>
+            <version>0.8.0</version>
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>org.jboss.shrinkwrap</groupId>
-            <artifactId>shrinkwrap-depchain-java7</artifactId>
-            <version>1.2.2</version>
-            <scope>test</scope>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.jboss.shrinkwrap</groupId>-->
+            <!--<artifactId>shrinkwrap-depchain-java7</artifactId>-->
+            <!--<version>1.2.2</version>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
 
         <!--<dependency>-->
             <!--<groupId>de.agitos</groupId>-->
