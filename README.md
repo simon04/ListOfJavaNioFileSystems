@@ -48,10 +48,6 @@ Below is a list of such filesystems.
 * [usrflo/encfs4j](https://github.com/usrflo/encfs4j) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.agitos/encfs4j/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.agitos/encfs4j)
 * [openCage/stellvertreter](https://github.com/openCage/stellvertreter) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.pfabulist.lindwurm/stellvertreter/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.pfabulist.lindwurm/stellvertreter)
 
-### ftp
-
-* [uis-it/nio-fs-provider/tree/master/sftp](https://github.com/uis-it/nio-fs-provider/tree/master/sftp)
-
 ### git
 
 hm
@@ -105,9 +101,10 @@ hm
 * [uis-it/nio-fs-provider/tree/master/smb](https://github.com/uis-it/nio-fs-provider/tree/master/smb)
 * [chalha/de.tttproject.jcifs](https://github.com/chalha/de.tttproject.jcifs)
 
-### ssh
+### ssh / sftp
 
 * [lucastheisen/jsch-nio](https://github.com/lucastheisen/jsch-nio)
+* [uis-it/nio-fs-provider/tree/master/sftp](https://github.com/uis-it/nio-fs-provider/tree/master/sftp)
 
 
 ### webdav
