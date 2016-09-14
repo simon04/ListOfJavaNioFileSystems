@@ -54,9 +54,8 @@ Below is a list of such filesystems.
 
 ### git
 
-hm
-* [insightful-systems/async-git](https://github.com/insightful-systems/async-git)
-
+* [beijunyi/ParallelGit](https://github.com/beijunyi/ParallelGit)
+ 
 #### github
 
 * [gnodet/githubfs](https://github.com/gnodet/githubfs)
